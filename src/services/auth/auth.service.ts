@@ -5,7 +5,7 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 import { saveToStorage } from './auth.helper';
 
-export class AuthorizationService {
+export class AuthService {
 	async main(type: 'login' | 'register', data: IEmailPassword) {
 		const response = await instance<IAuthResponse>({
 			url: `/auth/${type}`,
@@ -39,4 +39,4 @@ export class AuthorizationService {
 	}
 }
 
-export default new AuthorizationService();
+export default new AuthService();

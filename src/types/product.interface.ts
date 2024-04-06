@@ -1,5 +1,5 @@
-import { ICategory } from './category.type';
-import { IReview } from './review.type';
+import { ICategory } from './category.interface';
+import { IReview } from './review.interface';
 
 export interface IProduct {
 	id: number;

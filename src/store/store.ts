@@ -14,8 +14,8 @@ import { cartSlice } from './cart/cart.slice';
 import { userSlice } from './user/user.slice';
 
 const persistConfig = {
-	key: 'amazon-shop',
-	storage,
+	key: 'amazon-shop-clone',
+	storage: storage,
 	whitelist: ['cart'],
 };
 

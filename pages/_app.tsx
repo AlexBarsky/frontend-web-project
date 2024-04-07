@@ -1,4 +1,4 @@
-import '@/assets/styles/globals.css';
+import '@/assets/styles/globals.scss';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import type { AppProps } from 'next/app';
 import { Provider } from 'react-redux';

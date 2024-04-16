@@ -16,8 +16,8 @@ export type TypeProductDataFilters = {
 };
 
 export enum EnumProductSort {
-	HIGH_PRICE = 'high_price',
-	LOW_PRICE = 'low_price',
+	HIGH_PRICE = 'high-price',
+	LOW_PRICE = 'low-price',
 	NEWEST = 'newest',
 	OLDEST = 'oldest',
 }

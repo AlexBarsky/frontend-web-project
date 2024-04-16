@@ -42,7 +42,9 @@ export const userSlice = createSlice({
 				state.user = null;
 			})
 			.addCase(checkAuth.fulfilled, (state, action) => {
+				console.log(`Before: ${state.user}`);
 				state.user = action.payload.user;
+				console.log(`After: ${state.user}`);
 			});
 	},
 });

@@ -7,7 +7,11 @@ export const useAuthRedirect = () => {
 	const { replace } = useRouter();
 
 	useEffect(() => {
+		console.log(user);
+
 		if (user) {
+			console.log('test');
+
 			replace('/');
 		}
 	}, [user]);

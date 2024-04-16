@@ -8,7 +8,7 @@ export interface IProduct {
 	description: string;
 	price: number;
 	reviews: IReview[];
-	images: string[];
+	imgs: string[];
 	createdAt: string;
 	category: ICategory;
 }
@@ -16,3 +16,12 @@ export interface IProduct {
 export interface IProductDetails {
 	product: IProduct;
 }
+
+export type TypeProducts = {
+	products: IProduct[];
+};
+
+export type TypePaginationProducts = {
+	length: number;
+	products: IProduct[];
+};

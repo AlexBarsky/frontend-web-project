@@ -30,6 +30,7 @@ export const userSlice = createSlice({
 			})
 			.addCase(login.fulfilled, (state, action) => {
 				state.isLoading = false;
+				console.log(`fulfilled: ${action.payload.user}`);
 				state.user = action.payload.user;
 			})
 			.addCase(login.rejected, state => {

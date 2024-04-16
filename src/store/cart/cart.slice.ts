@@ -1,5 +1,9 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { IAddToCardPayload, ICartInitialState } from './cart.types';
+import {
+	IAddToCardPayload,
+	ICartInitialState,
+	IChangeQuantityPayload,
+} from './cart.types';
 
 const initialState: ICartInitialState = {
 	items: [],
@@ -10,11 +14,11 @@ export const cartSlice = createSlice({
 	initialState,
 	reducers: {
 		addToCart: (state, action: PayloadAction<IAddToCardPayload>) => {
-			const isExistSize = state.items.some(
-				item => item.size === action.payload.size,
+			const isExist = state.items.some(
+				item => item.product.id === action.payload.product.id,
 			);
 
-			if (!isExistSize) {
+			if (!isExist) {
 				state.items.push({ ...action.payload, id: state.items.length });
 			}
 		},
